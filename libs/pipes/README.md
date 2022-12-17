@@ -8,8 +8,8 @@ Run `nx test pipes` to execute the unit tests.
 
 ## Generation commands
 
-`nx g @nrwl/angular:lib pipes --publishable --importPath test`
+`nx g @nrwl/angular:lib pipes --buildable --importPath @poc-nx-angular/pipes`
 
 ## Add tree shakeable
 
-`nx generate @nrwl/angular:secondary-entry-point --library pipes --name pipe1`
+`nx g @nrwl/angular:library-secondary-entry-point`

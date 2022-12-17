@@ -1,30 +1,33 @@
-import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import {
+  MockBuilder,
+  MockRender,
+  MockedComponentFixture,
+  ngMocks,
+} from 'ng-mocks';
+import { AppModule } from './app.module';
 
 describe('AppComponent', () => {
+  let fixture: MockedComponentFixture<AppComponent>;
+
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [AppComponent, NxWelcomeComponent],
-    }).compileComponents();
+    await MockBuilder(AppComponent, AppModule);
+    fixture = MockRender(AppComponent);
   });
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+  it('should create', () => {
+    expect(fixture).toBeTruthy();
   });
 
-  it(`should have as title 'app1'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('app1');
+  it('should have title', () => {
+    expect(ngMocks.formatText(ngMocks.find('h1'))).toContain('Welcome app1');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Welcome app1');
+  it('should have poc-nx-angular-ui1', () => {
+    expect(ngMocks.find('poc-nx-angular-ui1', null)).not.toBeNull();
+  });
+
+  it('should have poc-nx-angular-ui2', () => {
+    expect(ngMocks.find('poc-nx-angular-ui2', null)).not.toBeNull();
   });
 });

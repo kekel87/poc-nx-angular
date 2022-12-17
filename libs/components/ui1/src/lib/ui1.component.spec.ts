@@ -1,25 +1,19 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { Ui1Component } from './ui1.component';
+import {
+  MockBuilder,
+  MockRender,
+  MockedComponentFixture,
+} from 'ng-mocks';
+import { Ui1Component, Ui1Module } from './ui1.component';
 
 describe('Ui1Component', () => {
-  let component: Ui1Component;
-  let fixture: ComponentFixture<Ui1Component>;
+  let fixture: MockedComponentFixture<Ui1Component>;
 
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ Ui1Component ]
-    })
-    .compileComponents();
-  });
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(Ui1Component);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    await MockBuilder(Ui1Component, Ui1Module);
+    fixture = MockRender(Ui1Component);
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(fixture).toBeTruthy();
   });
 });
