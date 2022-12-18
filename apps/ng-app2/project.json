@@ -1,22 +1,22 @@
 {
-  "name": "app1",
+  "name": "ng-app2",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/app1/src",
+  "sourceRoot": "apps/ng-app2/src",
   "prefix": "poc-nx-angular",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/app1",
-        "index": "apps/app1/src/index.html",
-        "main": "apps/app1/src/main.ts",
+        "outputPath": "dist/apps/ng-app2",
+        "index": "apps/ng-app2/src/index.html",
+        "main": "apps/ng-app2/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "apps/app1/tsconfig.app.json",
+        "tsConfig": "apps/ng-app2/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/app1/src/favicon.ico", "apps/app1/src/assets"],
-        "styles": ["apps/app1/src/styles.scss"],
+        "assets": ["apps/ng-app2/src/favicon.ico", "apps/ng-app2/src/assets"],
+        "styles": ["apps/ng-app2/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -48,12 +48,15 @@
     },
     "serve": {
       "executor": "@angular-devkit/build-angular:dev-server",
+      "options": {
+        "port": 4201
+      },
       "configurations": {
         "production": {
-          "browserTarget": "app1:build:production"
+          "browserTarget": "ng-app2:build:production"
         },
         "development": {
-          "browserTarget": "app1:build:development"
+          "browserTarget": "ng-app2:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -61,21 +64,20 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "app1:build"
+        "browserTarget": "ng-app2:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/app1/**/*.ts", "apps/app1/**/*.html"]
+        "lintFilePatterns": ["apps/ng-app2/**/*.ts", "apps/ng-app2/**/*.html"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/app1/jest.config.ts",
+        "jestConfig": "apps/ng-app2/jest.config.ts",
         "passWithNoTests": true
       }
     }

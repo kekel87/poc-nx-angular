@@ -2,32 +2,35 @@
 
 **See if NX solves my questions/problems in Monorepo Angular:**
 
+- [ ] applications and libraries version management
 - [x] tree shakable libraries (multiple entry points)
 - [x] management of dependencies between libs (+tree shakable)
 - [x] e2e testing
   - [ ] shared e2e testing
   - [ ] component e2e testing
 - [x] Storybook
-- [ ] global management of syntax rules and code formatter 👮
+- [ ] management of syntax rules and code formatter 👮
+  - [ ] global rules
+  - [ ] per language rules
+  - [ ] custom rules (rxjs, ngrx, import, unused-import)
 - [ ] style libraries (SCSS variables, mixings only, theming), publishable
-  - [ ] management of libs publication on npm
-  - [ ] applications and libraries can they have a version number managed separately ?
 - [ ] asset libraries
 - [ ] CI with Github Actions (or Gitlab CI/CD)
 - [x] NX and Angular update
 - [x] test with another language (React...)
 - [ ] distributed NX caching 🤔
+- [ ] management of libs publication on npm
 
 Idea of library splitting:
 
 ```
 📦ng-name
  ┣ 📂apps
- ┃ ┣ 📂app1
- ┃ ┣ 📂app1-e2e
- ┃ ┣ 📂app2
- ┃ ┣ 📂app2-e2e
- ┃ ┗ 📂components-e2e
+ ┃ ┣ 📂ng-app1
+ ┃ ┣ 📂ng-app1-e2e
+ ┃ ┣ 📂ng-app2
+ ┃ ┣ 📂ng-app2-e2e
+ ┃ ┣ 📂react-app
  ┃ ┗ 📂...
  ┗ 📂libs
    ┣ 📂components        // Pure UI shared components (tree shakable, look for Storybook and design system)

@@ -1,19 +1,19 @@
 {
-  "name": "app1-e2e",
+  "name": "ng-app1-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/app1-e2e/src",
+  "sourceRoot": "apps/ng-app1-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/app1-e2e/cypress.config.ts",
-        "devServerTarget": "app1:serve:development",
+        "cypressConfig": "apps/ng-app1-e2e/cypress.config.ts",
+        "devServerTarget": "ng-app1:serve:development",
         "testingType": "e2e"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "app1:serve:production"
+          "devServerTarget": "ng-app1:serve:production"
         }
       }
     },
@@ -21,10 +21,10 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/app1-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": ["apps/ng-app1-e2e/**/*.{js,ts}"]
       }
     }
   },
   "tags": [],
-  "implicitDependencies": ["app1"]
+  "implicitDependencies": ["ng-app1"]
 }
