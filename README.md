@@ -7,7 +7,7 @@
 - [x] e2e testing
   - [ ] shared e2e testing
   - [ ] component e2e testing
-- [ ] Storybook
+- [x] Storybook
 - [ ] global management of syntax rules and code formatter 👮
 - [ ] style libraries (SCSS variables, mixings only, theming), publishable
   - [ ] management of libs publication on npm
@@ -122,6 +122,15 @@ nx affected:test
 ```bash
 nx e2e app1-e2e
 nx affected:e2e
+```
+
+---
+
+```bash
+nx storybook [libs-name]
+nx storybook components
+
+nx build-storybook components
 ```
 
 **NX command**
