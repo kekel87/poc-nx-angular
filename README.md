@@ -15,8 +15,7 @@
 - [ ] asset libraries
 - [ ] CI with Github Actions (or Gitlab CI/CD)
 - [x] NX and Angular update
-- [ ] test with another language (React...)
-  > It looks compromised since I have initialized an angular monorepo 🤷
+- [x] test with another language (React...)
 - [ ] distributed NX caching 🤔
 
 Idea of library splitting:
@@ -90,37 +89,49 @@ npm run ng [CMD]
 **Runnning**
 
 ```bash
-npm start
+npm start # app1 default
+npm start [app-name]
 ```
 
 **Code formating**
 
 ```bash
-nx format:write all --base main
-nx run-many --target=lint --fix
+# nx config format
+nx format
+
+# apps format
+nx mint [app-lib-name]
 nx affected:lint --fix
+nx run-many --target=lint --fix
 ```
 
 **Code linting**
 
 ```bash
-nx format:check all --base main
-nx run-many -- --target=lint
+# nx config check
+nx format:check
+
+# apps lint
+nx lint [app-lib-name]
 nx affected:lint
+nx run-many --target=lint
 ```
 
 **Unit testing**
 
 ```bash
-nx run-many -- --target=test
+nx test [app-lib-name]
 nx affected:test
+nx run-many --target=test
 ```
 
 **End to end testing**
 
 ```bash
-nx e2e app1-e2e
+nx e2e [app-name-e2e]
+
 nx affected:e2e
+nx run-many --target=e2e
 ```
 
 **Storybook**

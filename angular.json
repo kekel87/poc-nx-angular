@@ -6,6 +6,8 @@
     "app2": "apps/app2",
     "app2-e2e": "apps/app2-e2e",
     "components": "libs/components",
-    "pipes": "libs/pipes"
+    "pipes": "libs/pipes",
+    "react-app": "apps/react-app",
+    "react-app-e2e": "apps/react-app-e2e"
   }
 }
