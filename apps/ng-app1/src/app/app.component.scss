@@ -1,0 +1,9 @@
+@import "@poc-nx-angular/styles/variables";
+@import "@poc-nx-angular/styles/mixing";
+@import "@poc-nx-angular/styles/fonts/roboto";
+
+h1 {
+  background-color: $primary;
+  font-family: 'Roboto';
+  @include text-large();
+}

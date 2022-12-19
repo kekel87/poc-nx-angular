@@ -19,7 +19,8 @@
       "@poc-nx-angular/components/ui1": ["libs/components/ui1/src/index.ts"],
       "@poc-nx-angular/components/ui2": ["libs/components/ui2/src/index.ts"],
       "@poc-nx-angular/pipes": ["libs/pipes/src/index.ts"],
-      "@poc-nx-angular/pipes/pipe1": ["libs/pipes/pipe1/src/index.ts"]
+      "@poc-nx-angular/pipes/pipe1": ["libs/pipes/pipe1/src/index.ts"],
+      "@poc-nx-angular/styles": ["file:libs/styles/scss"]
     }
   },
   "exclude": ["node_modules", "tmp"]
