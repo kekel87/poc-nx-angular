@@ -15,7 +15,7 @@
   - [ ] custom rules (rxjs, ngrx, import, unused-import)
 - [ ] style libraries (SCSS variables, mixings only, theming), publishable
 - [ ] asset libraries
-- [ ] CI with Github Actions (or Gitlab CI/CD)
+- [x] CI with Github Actions (or Gitlab CI/CD)
 - [x] NX and Angular update
 - [x] test with another language (React...)
 - [ ] distributed NX caching 🤔
