@@ -5,6 +5,9 @@
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "extends": [
+        "eslint:recommended"
+      ],
       "rules": {
         "@nrwl/nx/enforce-module-boundaries": [
           "error",
@@ -18,13 +21,59 @@
               }
             ]
           }
-        ]
+        ],
+        "no-console": ["warn", { "allow": ["error"] }]
       }
     },
     {
       "files": ["*.ts", "*.tsx"],
-      "extends": ["plugin:@nrwl/nx/typescript"],
-      "rules": {}
+      "parserOptions": {
+        "project": ["apps/*/tsconfig.*?.json", "lib/*/tsconfig.*?.json"],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "plugin:@nrwl/nx/typescript",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended",
+        "plugin:import/recommended",
+        "plugin:import/typescript"
+      ],
+      "plugins": ["unused-imports"],
+      "settings": {
+        "import/resolver": {
+          "typescript": {
+            "alwaysTryTypes": true,
+            "project": ["apps/*/tsconfig.*?.json", "lib/*/tsconfig.*?.json"]
+          }
+        }
+      },
+      "rules": {
+        "@typescript-eslint/no-unused-vars": [
+          "error",
+          {
+            "argsIgnorePattern": "^_",
+            "vars": "all",
+            "args": "all",
+            "ignoreRestSiblings": true
+          }
+        ],
+        "unused-imports/no-unused-imports": "error",
+        "import/order": [
+          "error",
+          {
+            "groups": [
+              ["external", "builtin", "type"],
+              ["internal"],
+              ["index", "parent", "sibling"],
+              ["object"]
+            ],
+            "newlines-between": "always",
+            "alphabetize": {
+              "order": "asc"
+            }
+          }
+        ]
+      }
     },
     {
       "files": ["*.js", "*.jsx"],

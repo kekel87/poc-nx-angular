@@ -9,10 +9,10 @@
   - [ ] shared e2e testing
   - [ ] component e2e testing
 - [x] Storybook
-- [ ] management of syntax rules and code formatter 👮
-  - [ ] global rules
-  - [ ] per language rules
-  - [ ] custom rules (rxjs, ngrx, import, unused-import)
+- [x] management of syntax rules and code formatter 👮
+  - [x] global rules
+  - [x] per framework rules
+  - [x] custom rules (rxjs, ngrx, import, unused-import)
 - [ ] style libraries (SCSS variables, mixings only, theming), publishable
 - [ ] asset libraries
 - [x] CI with Github Actions (or Gitlab CI/CD)

@@ -37,6 +37,7 @@
     "@angular/compiler-cli": "~15.0.0",
     "@angular/language-service": "~15.0.0",
     "@babel/preset-react": "^7.14.5",
+    "@ngrx/eslint-plugin": "^15.1.0",
     "@nrwl/cli": "15.3.3",
     "@nrwl/cypress": "15.3.3",
     "@nrwl/eslint-plugin-nx": "15.3.3",
@@ -63,12 +64,16 @@
     "babel-jest": "28.1.1",
     "cypress": "^11.0.0",
     "eslint": "8.15.0",
-    "eslint-config-prettier": "8.1.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-import-resolver-typescript": "^3.5.2",
     "eslint-plugin-cypress": "^2.10.3",
-    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "6.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "7.31.11",
     "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-rxjs": "^5.0.2",
+    "eslint-plugin-unused-imports": "^2.0.0",
     "html-webpack-plugin": "^5.5.0",
     "jest": "28.1.1",
     "jest-environment-jsdom": "28.1.1",
@@ -90,4 +95,3 @@
     "webpack": "^5.64.0"
   }
 }
-
