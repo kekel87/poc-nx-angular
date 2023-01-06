@@ -1,8 +1,5 @@
-import {
-  MockBuilder,
-  MockRender,
-  MockedComponentFixture,
-} from 'ng-mocks';
+import { MockBuilder, MockRender, MockedComponentFixture } from 'ng-mocks';
+
 import { Ui2Component, Ui2Module } from './ui2.component';
 
 describe('Ui1Component', () => {

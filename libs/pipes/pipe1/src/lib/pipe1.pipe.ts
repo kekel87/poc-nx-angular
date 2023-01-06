@@ -1,5 +1,4 @@
-import { NgModule, Pipe } from '@angular/core';
-import { PipeTransform } from '@angular/core';
+import { NgModule, Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'pipe1',

@@ -1,10 +1,11 @@
-import { AppComponent } from './app.component';
 import {
   MockBuilder,
   MockRender,
   MockedComponentFixture,
   ngMocks,
 } from 'ng-mocks';
+
+import { AppComponent } from './app.component';
 import { AppModule } from './app.module';
 
 describe('AppComponent', () => {
